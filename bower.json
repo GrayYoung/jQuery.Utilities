@@ -2,17 +2,18 @@
 	"name" : "jquery.utilties",
 	"main" : [ "dist/js/jquery.browser.js", "dist/js/jquery.browser.min.js" ],
 	"ignore" : [
-		"**/!dist/.*",
+		"demos",
+		"!dist/",
         "!README.md",
         "!LICENSE"
 	],
 	"dependencies" : {
 		"jquery": ">=1.6",
-		"jquery.migrate" : ">1.2.0 <2.0.0",
-		"jquery.tablesorter" : ">=2.14.5"
+		"jquery.migrate" : ">1.2.0 <2.0.0"
 	},
 	"devDependencies" : {
-		"jquery-1.11.1": "jquery#1.11.1"
+		"jquery": "jquery#1.11.1",
+		"jquery.tablesorter" : "jquery.tablesorter#>=2.14.5"
 	},
 	"version" : "1.0.0",
 	"keywords" : [
