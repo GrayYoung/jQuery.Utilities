@@ -1,0 +1,25 @@
+{
+  "name": "jQuery-Utilities",
+  "version": "1.0.0",
+  "dependencies": {
+  },
+  "description": "Test Browser",
+  "main": "gulpfile.js",
+  "author": "Gray Young",
+  "email": "windpet@live.cn",
+  "license": "Copyright 2014",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-clean": "latest",
+    "gulp-filter": "latest",
+    "gulp-flatten": "latest",
+    "gulp-jshint": "latest",
+    "gulp-load-plugins": "latest",
+    "gulp-minify-css": "latest",
+    "gulp-rename" : "latest",
+    "gulp-sass": "<1.0.0",
+    "gulp-size": "latest",
+    "gulp-uglify": "latest",
+    "jshint-stylish" : "latest"
+  }
+}
