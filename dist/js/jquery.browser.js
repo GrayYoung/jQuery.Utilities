@@ -17,7 +17,7 @@
     }
 }(function($) {
     /* Override and enhance jQuery.browser */
-    jQuery.uaMatch = function(ua) {
+    $.uaMatch = function(ua) {
 	ua = ua.toLowerCase();
 	/* msie -> trident */
 	var match = /(opera)(?:.*version|)[ \/]([\w.]+)/.exec(ua) || /(opr)[ \/]([\w.]+)/.exec(ua) || /(chrome)[ \/]([\w.]+)/.exec(ua) || /(webkit)[ \/]([\w.]+)/.exec(ua) || /(msie) ([\w.]+)/.exec(ua) || /(trident)(?:.*? rv:([\w.]+)|)/.exec(ua) || ua.indexOf('compatible') < 0 && ua.indexOf('trident') < 0 && /(mozilla)(?:.*? rv:([\w.]+)|)/.exec(ua) || [];
@@ -31,7 +31,7 @@
 	};
     };
 
-    matched = jQuery.uaMatch(navigator.userAgent);
+    matched = $.uaMatch(navigator.userAgent);
     browser = {};
 
     if (matched.browser) {
@@ -47,5 +47,5 @@
 	browser.safari = true;
     }
 
-    jQuery.browser = browser;
+    $.browser = browser;
 }));
