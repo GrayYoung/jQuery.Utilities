@@ -1,5 +1,8 @@
 jQuery.Utilities
 ==========================
+Including:
+jquery.browser.js
+jquery.clearForm.js
 
 Including:
 
