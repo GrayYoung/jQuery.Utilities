@@ -1,6 +1,9 @@
 @charset "utf-8";
 
-@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css);
-@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css);
-@import url(../js/lib/jquery.tablesorter/css/filter.formatter.css);
-@import url(../js/lib/jquery.tablesorter/css/theme.metro-dark.css);
+@import url("../js/lib/bootstrap/dist/css/bootstrap.min.css");
+@import url("../js/lib/bootstrap/dist/css/bootstrap-theme.min.css");
+
+a.glyphicon {
+	text-decoration: none;
+	outline: none;
+}

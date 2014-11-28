@@ -46,3 +46,8 @@ demos/res/js/lib/jquery/src
 demos/res/js/lib/jquery.tablesorter/docs
 demos/res/js/lib/jquery.tablesorter/testing
 demos/res/js/lib/jquery.tablesorter/beta-testing
+demos/res/js/lib/bootstrap/fonts
+demos/res/js/lib/bootstrap/grunt
+demos/res/js/lib/bootstrap/js
+demos/res/js/lib/bootstrap/less
+demos/res/js/lib/bootstrap/*.*

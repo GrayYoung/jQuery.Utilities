@@ -2,6 +2,7 @@
 	"name" : "jquery.utilties",
 	"main" : [ "dist/js/jquery.browser.js", "dist/js/jquery.browser.min.js", "dist/js/jquery.clearForm.js", "dist/js/jquery.clearForm.min.js" ],
 	"ignore" : [
+		"**/.*",
 		"demos",
 		"!dist/",
         "!README.md",
@@ -13,9 +14,9 @@
 	},
 	"devDependencies" : {
 		"jquery": "jquery#1.11.1",
-		"jquery.tablesorter" : "jquery.tablesorter#>=2.14.5"
+		"bootstrap": "bootstrap#latest"
 	},
-	"version" : "1.1.0",
+	"version" : "1.1.1",
 	"keywords" : [
 		"test browser",
 		"utilities",

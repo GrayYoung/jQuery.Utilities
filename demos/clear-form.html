@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery.Utilities - jQuery.clearForm</title>
+<link rel="stylesheet" type="text/css" href="res/css/common.css" />
+<script type="text/javascript" src="res/js/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="res/js/utilities/jquery.clearForm.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var count = 0;
+		var $messages = $('#messages');
+		
+		$('#resetForm').click(function(event) {
+			$(this).closest('form').clearForm({
+				itemCleared : function(event, ui) {
+					$messages.append('Input : Finish Cleared ' + ui.item.get(0).tagName + ' !<br />');
+				},
+				cleared : function(event, ui) {
+					$messages.append('Form: ' + ++count + '. Finish Cleared ' + ui.item.get(0).tagName + ' !<br />');
+				}
+			});
+			event.preventDefault();
+		});
+		
+		$('#resetFieldset').click(function(event) {
+			$(this).closest('fieldset').clearForm({
+				itemCleared : function(event, ui) {
+					$messages.append('Fieldset Input : Finish Cleared ' + ui.item.get(0).tagName + ' !<br />');
+				},
+				cleared : function(event, ui) {
+					$messages.append('Fieldset: ' + ++count + '. Finish Cleared ' + ui.item.get(0).tagName + ' !<br />');
+				}
+			});
+			event.preventDefault();
+		});
+		
+		$('#emptyMessages').click(function(event) {
+			$messages.empty();
+			event.preventDefault();
+		});
+	});
+</script>
+</head>
+<body>
+	<section class="container-fluid">
+		<h1>jQuery.Utilities - jQuery.clearForm</h1>
+		<hr />
+		<div class="row">
+			<div class="col-sm-8">
+				<form class="form-horizontal" role="form">
+					<fieldset>
+						<legend>Contact Information</legend>
+						<div class="form-group">
+							<label for="inputName" class="col-sm-2 control-label">Name</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="inputEmail3" placeholder="Name">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputEmail" class="col-sm-2 control-label">Email</label>
+							<div class="col-sm-10">
+								<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-2 col-sm-10">
+								<button id="resetFieldset" type="reset" class="btn btn-default">Reset</button>
+							</div>
+						</div>
+					</fieldset>
+					<hr />
+					<div class="form-group">
+						<label for="inputPassword" class="col-sm-2 control-label">Password</label>
+						<div class="col-sm-10">
+							<input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputAge" class="col-sm-2 control-label">Age</label>
+						<div class="col-sm-10">
+							<select class="form-control">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputSelf-assessment" class="col-sm-2 control-label">Self Assessment</label>
+						<div class="col-sm-10">
+							<textarea class="form-control" rows="3"></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<div class="checkbox">
+								<label> <input type="checkbox"> Remember me </label>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button id="resetForm" type="reset" class="btn btn-default">Reset</button>
+							<button type="submit" class="btn btn-default">Sign in</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col-sm-4">
+				<h3><a id="emptyMessages" title="Remove Massages" class="glyphicon glyphicon-remove-circle" href=""></a> Messages:</h3>
+				<p id="messages" class="alert bg-success"></p>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
