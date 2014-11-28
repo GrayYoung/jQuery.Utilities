@@ -1,6 +1,6 @@
 /**
  * Clear Form
- * Version: 1.1.1
+ * Version: 1.1.2
  * Author: Gray Young
  * 
  * Copyright 2014 Released under the MIT license.
@@ -17,7 +17,7 @@
 }(function($) {
 	$.fn.clearForm = function(options) {
 		$.fn.clearForm.defaults = $.extend({
-			defaultSelectedIndex : 0,
+			defaultSelectedIndex : -1,
 			cleared : null,
 			itemCleared : null
 		}, options);

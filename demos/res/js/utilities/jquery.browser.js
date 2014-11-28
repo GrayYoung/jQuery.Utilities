@@ -1,6 +1,6 @@
 /**
  * Browser
- * Version: 1.1.1
+ * Version: 1.1.2
  * Author: Gray Young
  * 
  * Copyright 2014 Released under the MIT license.
