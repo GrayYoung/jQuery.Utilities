@@ -2,8 +2,10 @@
 	"name" : "jquery.utilties",
 	"main" : [ "dist/js/jquery.browser.js", "dist/js/jquery.browser.min.js", "dist/js/jquery.clearForm.js", "dist/js/jquery.clearForm.min.js" ],
 	"ignore" : [
-		"*/*",
-		"!dist/",
+		"demos",
+		"gulpfile.js",
+		"package.json",
+		"!dist/*",
         "!README.md",
         "!LICENSE"
 	],
