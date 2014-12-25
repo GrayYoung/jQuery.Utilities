@@ -1,6 +1,6 @@
 {
   "name": "jQuery-Utilities",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
   },
   "description": "Test Browser",
@@ -12,7 +12,7 @@
     "gulp": "latest",
     "gulp-clean": "latest",
     "gulp-filter": "latest",
-    "gulp-flatten": "latest",
+    "gulp-flatten" : "latest",
     "gulp-jshint": "latest",
     "gulp-load-plugins": "latest",
     "gulp-minify-css": "latest",

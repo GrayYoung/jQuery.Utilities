@@ -28,7 +28,7 @@ var sourcesPaths = {
 
 var targetPaths = {
 	styles : path.join(fileNames.targetUrl, fileNames.styles),
-	scripts : path.join(fileNames.targetUrl, fileNames.scripts)
+	scripts : fileNames.targetUrl
 }
 
 gulp.task('styles', function() {

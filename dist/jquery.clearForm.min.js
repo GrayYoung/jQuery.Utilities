@@ -1,6 +1,6 @@
 /**
  * Clear Form
- * Version: 1.1.5
+ * Version: 1.1.6
  * Author: Gray Young
  * 
  * Copyright 2014 Released under the MIT license.
