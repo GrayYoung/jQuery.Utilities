@@ -7,8 +7,8 @@
 		"gulpfile.js",
 		"package.json",
 		"!dist/*",
-        "!README.md",
-        "!LICENSE"
+		"!README.md",
+		"!LICENSE"
 	],
 	"dependencies" : {
 		"jquery": ">=1.6",
