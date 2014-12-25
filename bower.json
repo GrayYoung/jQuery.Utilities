@@ -3,12 +3,11 @@
 	"main" : [ "dist/js/jquery.browser.js", "dist/js/jquery.browser.min.js", "dist/js/jquery.clearForm.js", "dist/js/jquery.clearForm.min.js" ],
 	"ignore" : [
 		"**/.*",
+		"build",
 		"demos",
-		"gulpfile.js",
-		"package.json",
-		"!dist/*",
-		"!README.md",
-		"!LICENSE"
+		"external",
+        "gulpfile.js",
+        "package.json"
 	],
 	"dependencies" : {
 		"jquery": ">=1.6",
