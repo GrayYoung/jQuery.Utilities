@@ -2,8 +2,7 @@
 	"name" : "jquery.utilties",
 	"main" : [ "dist/js/jquery.browser.js", "dist/js/jquery.browser.min.js", "dist/js/jquery.clearForm.js", "dist/js/jquery.clearForm.min.js" ],
 	"ignore" : [
-		"**/.*",
-		"demos",
+		"*/*",
 		"!dist/",
         "!README.md",
         "!LICENSE"
@@ -16,7 +15,7 @@
 		"jquery": "jquery#1.11.1",
 		"bootstrap": "bootstrap#latest"
 	},
-	"version" : "1.1.2",
+	"version" : "1.1.3",
 	"keywords" : [
 		"test browser",
 		"utilities",
