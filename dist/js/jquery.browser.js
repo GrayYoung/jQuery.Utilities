@@ -1,6 +1,6 @@
 /**
  * Browser
- * Version: 1.1.1
+ * Version: 1.1.3
  * Author: Gray Young
  * 
  * Copyright 2014 Released under the MIT license.
@@ -37,7 +37,8 @@
 		browser[(matched.browser == 'trident' ? 'msie' : matched.browser == 'opr' ? 'opera' : matched.browser)] = true;
 		browser[matched.operation] = true;
 		browser[matched.device] = true;
-		browser.version = matched.version;
+		browser.version = parseInt(matched.version, 10);
+		browser.oVersion = matched.version;
 	}
 
 	if (browser.chrome || (browser.opera && parseInt(browser.version, 10) >= 15)) {
