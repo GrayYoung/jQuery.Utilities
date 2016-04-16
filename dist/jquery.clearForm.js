@@ -1,9 +1,9 @@
 /**
  * Clear Form
- * Version: 1.1.6
+ * Version: 1.1.7
  * Author: Gray Young
  * 
- * Copyright 2014 Released under the MIT license.
+ * Copyright 2016 Released under the MIT license.
  */
 
 (function(factory) {
