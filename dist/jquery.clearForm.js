@@ -1,6 +1,6 @@
 /**
  * Clear Form
- * Version: 1.1.7
+ * Version: 1.1.8
  * Author: Gray Young
  * 
  * Copyright 2016 Released under the MIT license.
@@ -21,7 +21,7 @@
 			textGroup : [ 'input', 'textarea' ],
 			unitGroup : [ 'radio', 'checkbox' ],
 			listGroup : [ 'select' ],
-			excludeType : [ 'button', 'submit', 'reset' ]
+			excludeType : [ 'button', 'image', 'submit', 'reset' ]
 		};
 		var _clearField = function(element) {
 			var tagName = element.tagName.toLowerCase();
@@ -46,13 +46,11 @@
 			var event = null, ui = {
 				item : $(this)
 			};
-			
-			if ($.inArray(tagName, _supporType.textGroup) >= 0 || $.inArray(tagName, _supporType.listGroup) >= 0) {
-				if ($.inArray(this.type, _supporType.excludeType) < 0) {
-					_clearField(this);
-				}
+
+			if(($.inArray(tagName, _supporType.textGroup) >= 0 || $.inArray(tagName, _supporType.listGroup) >= 0) && $.inArray(this.type, _supporType.excludeType) < 0) {
+				_clearField(this);
 			} else {
-				$(':input:not(:button, :submit, :reset)', this).each(function() {
+				$(':input:not(:' + _supporType.excludeType.join(', :') + ')', this).each(function() {
 					_clearField(this);
 				});
 				if ($.type(opts.cleared) == 'function') {

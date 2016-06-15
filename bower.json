@@ -17,7 +17,7 @@
 		"jquery": "jquery#1.11.1",
 		"bootstrap": "bootstrap#latest"
 	},
-	"version" : "1.1.7",
+	"version" : "1.1.8",
 	"keywords" : [
 		"test browser",
 		"utilities",
