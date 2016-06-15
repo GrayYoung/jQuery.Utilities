@@ -17,7 +17,7 @@
     "gulp-load-plugins": "latest",
     "gulp-minify-css": "latest",
     "gulp-rename" : "latest",
-    "gulp-sass": "<1.0.0",
+    "gulp-sass": "latest",
     "gulp-size": "latest",
     "gulp-uglify": "latest",
     "jshint-stylish" : "latest"

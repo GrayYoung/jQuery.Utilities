@@ -4,13 +4,14 @@
 <meta charset="UTF-8">
 <title>jQuery.Utilities - jQuery.clearForm</title>
 <link rel="stylesheet" type="text/css" href="res/css/common.css" />
+<!-- saved from url=(0014)about:internet -->
 <script type="text/javascript" src="res/js/lib/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="res/js/utilities/jquery.clearForm.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
 		var count = 0;
 		var $messages = $('#messages');
-		
+
 		$('#resetForm').click(function(event) {
 			$(this).closest('form').clearForm({
 				itemCleared : function(event, ui) {
@@ -22,7 +23,7 @@
 			});
 			event.preventDefault();
 		});
-		
+
 		$('#resetFieldset').click(function(event) {
 			$(this).closest('fieldset').clearForm({
 				itemCleared : function(event, ui) {
@@ -34,7 +35,7 @@
 			});
 			event.preventDefault();
 		});
-		
+
 		$('#emptyMessages').click(function(event) {
 			$messages.empty();
 			event.preventDefault();
