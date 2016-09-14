@@ -1,6 +1,6 @@
 /**
- * Clear Form
- * Version: 1.1.8
+ * jQuery.Utilities - Clear Form
+ * Version: 1.1.9
  * Author: Gray Young
  * 
  * Copyright 2016 Released under the MIT license.
@@ -59,7 +59,7 @@
 			}
 		});
 	};
-    
+
 	$.fn.clearForm.defaults = {
 		defaultSelectedIndex : 0,
 		cleared : null,

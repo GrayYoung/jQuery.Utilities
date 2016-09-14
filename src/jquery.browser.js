@@ -1,6 +1,6 @@
 /**
- * Browser
- * Version: 1.1.8
+ * jQuery.Utilities - Browser
+ * Version: @VERSION
  * Author: Gray Young
  * 
  * Copyright 2016 Released under the MIT license.
