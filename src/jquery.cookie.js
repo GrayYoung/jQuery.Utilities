@@ -18,6 +18,32 @@
 	$.cookie = {
 		get: function(name) {
 			var cookieName = encodeURIComponent(name) + '=', cookieStart = document.cookie.indexOf(cookieName), cookieValue = null, cookieEnd, subCookies, i, parts, result = {};
+			var rbrace = /^(?:\{[\w\W]*\}|\[[\w\W]*\])$/;
+
+			function getData(data) {
+				if (data === 'true') {
+					return true;
+				}
+
+				if (data === 'false') {
+					return false;
+				}
+
+				if (data === 'null') {
+					return null;
+				}
+
+				// Only convert to a number if it doesn't change the string
+				if (data === +data + '') {
+					return +data;
+				}
+
+				if (rbrace.test(data)) {
+					return JSON.parse(data);
+				}
+
+				return data;
+			}
 
 			if (cookieStart > -1) {
 				cookieEnd = document.cookie.indexOf(';', cookieStart);
@@ -33,7 +59,7 @@
 					subCookies = cookieValue.split('&');
 					for (i = 0, len = subCookies.length; i < len; i++) {
 						parts = subCookies[i].split('=');
-						result[decodeURIComponent(parts[0])] = decodeURIComponent(parts[1]);
+						result[decodeURIComponent(parts[0])] = getData(decodeURIComponent(parts[1]));
 					}
 	
 					return result;
