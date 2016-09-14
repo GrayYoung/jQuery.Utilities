@@ -7,25 +7,25 @@
 
 var gulp = require('gulp');
 var path = require('path');
+var fs = require('graceful-fs');
 var plugins = require('gulp-load-plugins')();
 
+var dataBower = JSON.parse(fs.readFileSync('./bower.json', 'utf8'))
 var fileNames = {
-	sourcesUrl : path.join('demos', 'res'),
+	sourcesUrl : path.join('./'),
 	targetUrl : 'dist',
 	styles : 'css',
-	scripts : 'js',
+	scripts : 'src',
 };
-
 var sourcesPaths = {
 	styles : {
 		base : path.join(fileNames.sourcesUrl, fileNames.styles, '**', 'utilities', '**', '*.css'),
 		sass : path.join(fileNames.sourcesUrl, fileNames.styles, '**', 'utilities', '**', '*.{sass,scss}')
 	},
 	scripts : {
-		base : path.join(fileNames.sourcesUrl, fileNames.scripts, '**', 'utilities', '**', '*.js')
+		base : path.join(fileNames.sourcesUrl, fileNames.scripts, '**', '*.js')
 	}
 };
-
 var targetPaths = {
 	styles : path.join(fileNames.targetUrl, fileNames.styles),
 	scripts : fileNames.targetUrl
@@ -50,7 +50,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('scripts', function() {
-	gulp.src(sourcesPaths.scripts.base).pipe(plugins.jshint({
+	gulp.src(sourcesPaths.scripts.base).pipe(plugins.replace('@VERSION', dataBower.version)).pipe(plugins.jshint({
 		/* Visit http://www.jshint.com/docs/options/ to lookup detail */
 		/* Enforcing */
 		bitwise : false,
@@ -87,7 +87,7 @@ gulp.task('scripts', function() {
 		title : 'Scripts'
 	}));
 
-	gulp.src(sourcesPaths.scripts.base).pipe(plugins.uglify({
+	gulp.src(sourcesPaths.scripts.base).pipe(plugins.replace('@VERSION', dataBower.version)).pipe(plugins.uglify({
 		preserveComments : 'all'
 	})).pipe(plugins.rename({
 		suffix : '.min'

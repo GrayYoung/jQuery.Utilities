@@ -1,6 +1,6 @@
 /**
  * jQuery.Utilities - Clear Form
- * Version: 1.1.9
+ * Version: @VERSION
  * Author: Gray Young
  * 
  * Copyright 2016 Released under the MIT license.

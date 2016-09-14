@@ -1,6 +1,6 @@
 {
   "name": "jQuery-Utilities",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "dependencies": {
   },
   "description": "Test Browser",
@@ -12,14 +12,15 @@
     "gulp": "latest",
     "gulp-clean": "latest",
     "gulp-filter": "latest",
-    "gulp-flatten" : "latest",
+    "gulp-flatten": "latest",
     "gulp-jshint": "latest",
     "gulp-load-plugins": "latest",
     "gulp-minify-css": "latest",
-    "gulp-rename" : "latest",
+    "gulp-rename": "latest",
+    "gulp-replace": "latest",
     "gulp-sass": "latest",
     "gulp-size": "latest",
     "gulp-uglify": "latest",
-    "jshint-stylish" : "latest"
+    "jshint-stylish": "latest"
   }
 }
