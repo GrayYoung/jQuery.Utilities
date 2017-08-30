@@ -15,7 +15,7 @@
 		factory(jQuery);
 	}
 }(function($) {
-	$.cookie = {
+	var cookie = {
 		get: function(name) {
 			var cookieName = encodeURIComponent(name) + '=', cookieStart = document.cookie.indexOf(cookieName), cookieValue = null, cookieEnd, subCookies, i, parts, result = {};
 			var rbrace = /^(?:\{[\w\W]*\}|\[[\w\W]*\])$/;
@@ -126,4 +126,10 @@
 			}
 		}
 	};
+
+	if($) {
+		$.cookie = cookie;
+	}
+
+	return cookie;
 }));
