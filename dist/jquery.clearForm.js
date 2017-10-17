@@ -30,16 +30,14 @@
 			};
 
 			if ($.inArray(element.type.toLowerCase(), _supporType.unitGroup) >= 0) {
-				ui.item.prop('checked', ui.item.prop('defaultChecked'));
+				ui.item.prop('checked', false);
 			} else if ($.inArray(tagName, _supporType.textGroup) >= 0) {
-				ui.item.val(ui.item.prop('defaultValue'));
+				ui.item.val('');
 			} else if ($.inArray(tagName, _supporType.listGroup) >= 0) {
-				ui.item.children().each(function(index) {
-					if(this.defaultSelected) {
-						ui.item.prop('selectedIndex', index);
-						return false;
-					}
-				});
+				ui.item.val('');
+				if(ui.item.prop('selectedIndex') === -1) {
+					ui.item.prop('selectedIndex', 0);
+				}
 			}
 			if ($.type(opts.after) === 'function') {
 				opts.after(event, ui);
